@@ -21,7 +21,8 @@
                 <h1>Cadastre-se</h1>
                 <br>
                 <form action="{% url 'cadastro' %}" method="POST">
-{% csrf_token %}
+                    {% csrf_token %}
+                    <input type="hidden" name="csrf_token" value="">
                     <label>Username</label>
                     <input type="text" class="form-control input-pers" name="username" placeholder="Digite seu username">
                     <br>

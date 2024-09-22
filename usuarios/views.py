@@ -37,8 +37,7 @@ def cadastro(request):
             
 
 
-        return HttpResponse(f'{username} - {senha} - {confirmar_senha}')
-    
+        
 def logar(request):
     if request.method == "GET":
         return render(request, 'logar.html')
@@ -48,5 +47,8 @@ def logar(request):
         senha = request.POST.get('senha')
 
         user = auth.authenticate(request, username=username, password=senha)
-        print(user)
-        return HttpResponse('teste')
+        if  user:
+            auth.login(request, user)
+            return redirect('/empresarios/cadstrar_empresas') # Vai dar erro
+        messages.add_message(request, constants.ERROR, 'Usuario ou senha invalida')
+        return redirect('/usuarios/logar')
