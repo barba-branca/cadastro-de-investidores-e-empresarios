@@ -21,6 +21,7 @@
                 {% endif %}
                 <br>
                 <form action="#" method="POST">
+                    {% csrf_token %}
                     <label>Username</label>
                     <input type="text" class="form-control input-pers" name="username" placeholder="Digite seu username">
                     <br>
