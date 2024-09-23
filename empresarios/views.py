@@ -25,23 +25,28 @@ def cadastrar_empresa(request):
         logo = request.FILES.get('logo')
 
         
-        empresa = Empresas(
-            user=request.user,
-            nome=nome,
-            cnpj=cnpj,
-            site=site,
-            tempo_existencia=tempo_existencia,
-            descricao=descricao,
-            data_final_captacao=data_final,
-            percentual_equity=percentual_equity,
-            estagio=estagio,
-            area=area,
-            publico_alvo=publico_alvo,
-            valor=valor,
-            pitch=pitch,
-            logo=logo
-        )
-        empresa.save()
+        try:
+            empresa = Empresas(
+                user=request.user,
+                nome=nome,
+                cnpj=cnpj,
+                site=site,
+                tempo_existencia=tempo_existencia,
+                descricao=descricao,
+                data_final_captacao=data_final,
+                percentual_equity=percentual_equity,
+                estagio=estagio,
+                area=area,
+                publico_alvo=publico_alvo,
+                valor=valor,
+                pitch=pitch,
+                logo=logo
+            )
+            
+            empresa.save()
+        except:
+            messages.add_message(request, constants.ERROR, 'Erro interno do servidor')
+            return redirect('/empresarios/cadastrar_empresa')
         
-        messages.add_message(request, constants.SUCESS, 'Empresa criada com sucesso')
+        messages.add_message(request, constants.SUCCESS, 'Empresa criada com sucesso')
         return redirect('/empresarios/cadastrar_empresa')
