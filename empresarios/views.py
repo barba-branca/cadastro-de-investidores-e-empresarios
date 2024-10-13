@@ -4,6 +4,9 @@ from django.contrib import messages
 from django.contrib.messages import constants
 
 def cadastrar_empresa(request):
+    if  not request.user.is_authenticated:
+        return redirect('/usuarios/logar')
+
     if request.method == "GET":      
         return render(request,'cadastrar_empresa.html',
                       {'tempo_existencia': Empresas.tempo_existencia_choices,
@@ -50,3 +53,16 @@ def cadastrar_empresa(request):
         
         messages.add_message(request, constants.SUCCESS, 'Empresa criada com sucesso')
         return redirect('/empresarios/cadastrar_empresa')
+
+def listar_empresas(request):
+    if  not request.user.is_authenticated:
+        return redirect('/usuarios/logar')
+    if request.method == "GET":
+        empresas = Empresas.objects.filter(user=request.user)
+        return render(request, 'listar_empresas.html', {'empresas': empresas})
+    
+def empresa(request, id):
+    empresa = Empresas.objects.get(id=id)
+    if request.method == "GET":
+        return render(request, 'empresa.html')
+    
