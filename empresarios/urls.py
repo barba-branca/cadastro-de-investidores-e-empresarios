@@ -1,8 +1,10 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('cadastrar_empresa/', views.cadastrar_empresa, name="cadastrar_empresa"),
     path('listar_empresas/', views.listar_empresas, name="listar_empresas"),
     path('empresa/<int:id>', views.empresa, name="empresa")
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

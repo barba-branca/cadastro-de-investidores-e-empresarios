@@ -64,5 +64,5 @@ def listar_empresas(request):
 def empresa(request, id):
     empresa = Empresas.objects.get(id=id)
     if request.method == "GET":
-        return render(request, 'empresa.html')
+        return render(request, 'empresa.html', {'empresa': empresa})
     
