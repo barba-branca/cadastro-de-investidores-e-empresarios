@@ -55,9 +55,6 @@ class Documento(models.Model):
     empresa = models.ForeignKey(Empresas, on_delete=models.DO_NOTHING)
     titulo = models.CharField(max_length=30)
     arquivo = models.FileField(upload_to="documentos")
-
     def __str__(self):
         return self.titulo
-    
-def add_doc(request, id):
-    empresa = Empresas.objects.get(id=id)
+        

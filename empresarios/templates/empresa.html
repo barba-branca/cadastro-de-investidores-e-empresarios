@@ -118,7 +118,7 @@
 
                     <h3>Anexar documentos</h3>
 
-                    <form action="{% url 'add_doc' empresa.id %}" method="POST" enctype='multipart/form-data'>{% csrf_token %}
+                    <form action="{% url 'add_doc' empresa.id %}" method="POST" enctype='multipart/form-data'>{% csrf_token %}<form action="{% url 'add_doc' empresa.id %}" method="POST" enctype='multipart/form-data'>{% csrf_token %}
 
                         <label>Titulo</label>
 

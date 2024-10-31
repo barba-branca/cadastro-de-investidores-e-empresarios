@@ -66,3 +66,5 @@ def empresa(request, id):
     if request.method == "GET":
         return render(request, 'empresa.html', {'empresa': empresa})
     
+def add_doc(request, id):
+    empresa = Empresas.objects.get(id=id)
