@@ -49,4 +49,4 @@ class Empresas(models.Model):
     
     @property
     def valuation(self):
-        return (100 * self.valor) / self.percentual_equity
+        return f'{(100 * self.valor) / self.percentual_equity :.2f}'
