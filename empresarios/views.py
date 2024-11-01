@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Empresas
+from .models import Empresas, Documento
 from django.contrib import messages
 from django.contrib.messages import constants
 
@@ -58,6 +58,7 @@ def listar_empresas(request):
     if  not request.user.is_authenticated:
         return redirect('/usuarios/logar')
     if request.method == "GET":
+        #TODO:realizar os filtro das empresas
         empresas = Empresas.objects.filter(user=request.user)
         return render(request, 'listar_empresas.html', {'empresas': empresas})
     
@@ -68,3 +69,29 @@ def empresa(request, id):
     
 def add_doc(request, id):
     empresa = Empresas.objects.get(id=id)
+    titulo = request.POST.get('titulo')
+    arquivo = request.FILES.get('arquivo')
+    extensao = arquivo.name.split('.')
+
+    if documento.empresa.user != request.user():
+        messages.add_message(request, constants.ERROR, "Esse documento não é seu")
+        return redirect(f'/empresarios/empresa/{empresa.id}')
+
+    if extensao[1] != 'pdf':
+        messages.add_message(request, constants.ERROR, "Envie apenas PDF's" )
+        return redirect(f'/empresarios/empresa/{id}')
+
+    if not arquivo:
+        messages.add_message(request, constants.ERROR, 'Envie um arquivo.')
+        return redirect(f'/empresarios/empresa/{id}')
+
+    documento = Documento(
+        empresa=empresa,
+        titulo=titulo,
+        arquivo=arquivo
+    )
+
+    documento.save()
+
+    messages.add_message(request, constants.SUCCESS, 'Arquivo cadastrado com sucesso')
+    return redirect(f'/empresarios/empresa/{id}')
