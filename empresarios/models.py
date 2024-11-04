@@ -55,6 +55,15 @@ class Documento(models.Model):
     empresa = models.ForeignKey(Empresas, on_delete=models.DO_NOTHING)
     titulo = models.CharField(max_length=30)
     arquivo = models.FileField(upload_to="documentos")
+    
+    def __str__(self):
+        return self.titulo
+    
+class Metricas(models.Model):
+    empresa = models.ForeignKey(Empresas, on_delete=models.DO_NOTHING)
+    titulo = models.CharField(max_length=30)
+    valor = models.FloatField()
+
     def __str__(self):
         return self.titulo
         
