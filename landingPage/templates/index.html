@@ -18,10 +18,10 @@
 <nav class="navbar-home">
     <img src="{% static 'landingPage/img/image.png' %}" alt="Minha imagem">
     <ul>
-        <li><a href="">Início</a></li>
-        <li><a href="{% url 'cadastrar_empresa' %}">Soluções</a></li>
-        <li><a href="">Nosso diferencial</a></li>
-        <li><a href="{% url 'cadastrar_empresa' %}">Planos</a></li>
+        <li><a href="{% url 'landingPage' %}">Início</a></li>
+        <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#diferencial">Nosso diferencial</a></li>
+        <li><a href="#planos">Planos</a></li>
     </ul>
 </nav>
 
@@ -54,7 +54,7 @@
 </div>
 
 <!-- Solução -->
-<div class="solucao">
+<div id = "solucoes" class="solucao">
     <img src="{% static 'landingPage/img/Investidores.png' %}" alt="Homem batendo o martelo, como se fosse um leilão em frente a um notebook.">
     <div class="texto-solucao">
         <h2>Soluções</h2>
@@ -64,7 +64,7 @@
             garantimos que ambos os lados se beneficiem de forma significativa.
         </p>
         <!-- Diferencial -->
-        <div class="diferencial">
+        <div id ="diferencial" class="diferencial">
             <p>Nossos diferenciais</p>
             <i class="fas fa-arrow-down"></i>
         </div>
@@ -115,78 +115,45 @@
     </div>
 </div>
 
-<div class="f-planos">
-    <img src="{% static 'landingPage/img/feliz.png' %}" alt="">
-    <div class="f-planos-descricao">
-        <h2>Planos </h2>
-        <p>Escolha o plano ideal para suas necessidades, com recursos flexíveis e acessíveis.
-        </p>
-    </div>
-</div>
 
-<div class="planos-title">
+<div id= "planos" class="planos-title">
     <h2>Planos</h2>
 </div>
+<div class="desc-planos">
+    <p>Escolha o plano ideal para suas necessidades, com recursos flexíveis e acessíveis.</p>
+</div>
 <div class="tipos-plano">
-<div class="plano-basico">
-    <h3>Básico(free)</h3>
-    <ul>
-        <li>        
-        Acesso limitado à plataforma, podendo cadastrar apenas uma startup com
-        funcionalidades básicas de registro.
-        </li>
-        <li>
-        Acesso limitado para visualizar startups cadastradas,
-        mas sem poder participar de leilões ou fazer investimentos
-        até uma certa quantia ou quantidade de startups.
-        </li>
-        <li>
-        Permite que os usuários testem a plataforma e vejam seu funcionamento
-        antes de se comprometerem com um plano pago.
-        </li>
-    </ul>
-    <button class="contrate-agora">Contrate agora</button>
-</div>
+    <div class="plano-basico">
+        <h3>Básico (Free)</h3>
+        <ul>
+            <li>Acesso limitado à plataforma para cadastrar 1 startup com funcionalidades básicas.</li>
+            <li>Acesso limitado para visualizar startups cadastradas, sem participar de leilões.</li>
+            <li>Testar a plataforma antes de se comprometer com um plano pago.</li>
+        </ul>
+        <button type="submit" class="contrate-agora">Contrate agora</button>
+    </div>
 
-<div class="plano-profissional">
-    <div class="recomendado">Recomendado</div>
-    <h3>Profissional</h3>
-    <p>R$100 | Mensal </p>
-    <ul>
-        <li>        
-            Permite cadastrar mais de uma startup, com acesso completo a métricas detalhadas,
-             relatórios de análise e a capacidade de receber propostas de investidores.
-        </li>
-        <li>
-            Permite participar de leilões de investimento, visualizar mais startups,
-             e obter relatórios analíticos sobre as startups em que estão interessados.
-        </li>
-        <li>
-            Acesso a uma análise mais profunda, com relatórios de desempenho e mais dados
-            de cada startup, como métricas de crescimento, riscos e oportunidades.
-        </li>
-    </ul>
-    <button class="contrate-agora">Contrate agora</button>
-</div>
+    <div class="plano-profissional">
+        <div class="recomendado">Recomendado</div>
+        <h3>Profissional</h3>
+        <p>R$100 | Mensal</p>
+        <ul>
+            <li>Cadastrar múltiplas startups com acesso a métricas detalhadas e relatórios.</li>
+            <li>Participar de leilões de investimento e obter análises avançadas.</li>
+            <li>Relatórios analíticos e métricas de crescimento de startups.</li>
+        </ul>
+        <button type="submit" class="contrate-agora">Contrate agora</button>
+    </div>
 
-<div class="plano-corporativo">
-    <h3>Corporativo</h3>
-    <p>R$200 | Mensal </p>
-    <ul>
-        <li>        
-            Criado para empresas ou investidores que possuem múltiplas startups ou capital para
-            investir em vários projetos ao mesmo tempo. Inclui funcionalidades personalizadas,
-            como dashboards exclusivos, suporte dedicado e integração com ferramentas externas.
-
-        </li>
-        <li>
-            Planos personalizados, com suporte prioritário e acesso a todas as funcionalidades
-            da plataforma, incluindo relatórios detalhados e consultoria contínua.
-
-        </li>
-    </ul>
-    <button class="contrate-agora">Contrate agora</button>
-</div>
+    <div class="plano-corporativo">
+        <h3>Corporativo</h3>
+        <p>R$200 | Mensal</p>
+        <ul>
+            <li>Funcionalidades personalizadas, dashboards exclusivos e suporte dedicado.</li>
+            <li>Planos personalizados, com acesso a relatórios detalhados e consultoria contínua.</li>
+        </ul>
+        <button type="submit" class="contrate-agora">Contrate agora</button>
+    </div>
 </div>
 
 
@@ -199,13 +166,13 @@
             <input type="text" placeholder="Nome">
             <input type="email" placeholder="Email">
             <input type="number" placeholder="Telefone">
-            <input type="text" placeholder="Deixe a sua mensagem">
+            <textarea placeholder="Deixe a sua mensagem"></textarea>
             <button>ENVIAR MENSAGEM</button>
         </div>
     </div>
 </div>
 
-<div class="footer">
+<footer>
     <div class="footer-conteudo">
         <div class="lado-esquerdo">
             <div class="icones-redes-sociais">
@@ -242,11 +209,12 @@
                 <p>AlgumEstado, País</p>
                 <p>(123) 456 7890</p>
             </div>
-            <div class="email"><p>email@email.com</p></div>
+            <div class="email">
+                <p>email@email.com</p>
+            </div>
         </div>
     </div>
-</div>
-<footer>
-    <p>Copyright © 2024 - START-SE | Todos os direitos reservados</p>
+    <p class="copyright">Copyright © 2024 - START-SE | Todos os direitos reservados</p>
 </footer>
+
 {% endblock 'body' %}
