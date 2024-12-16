@@ -1,0 +1,615 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #070514;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+.navbar-home {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-home img {
+    width: 200px;
+}
+
+.navbar-home ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-home li {
+    margin-left: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.navbar-home a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.navbar-home a:hover {
+    color: #ff0f7b;
+}
+
+.topo-page {
+    position: relative;
+    height: 400px;
+}
+
+.topo-page img {
+    width: 100%;
+    height: 120%;
+    object-fit: cover;
+}
+
+.topo-page h1, .topo-page p {
+    position: absolute;
+    text-align: center;
+}
+
+.topo-page h1 {
+    top: 25%;
+    font-size: 55px;
+    left: 10%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.topo-page p {
+    bottom: 27%;
+    left: 10%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-rosa {
+    background-color: #ff0f7b;
+    color: #fff;
+    font-size: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 9%;
+    transition: 0.5s;
+}
+
+.btn-rosa:hover {
+    background-color: #e60960;
+}
+
+.btn-rosa i {
+    margin-left: 10px;
+    font-size: 20px;
+    background-color: #fff;
+    color: #090004;
+    border-radius: 50%;
+    padding: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.descricao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    border-bottom: 5px solid #fff;
+}
+
+.descricao img {
+    width: 50%;
+    margin-right: 20px;
+    margin-top: 30px
+}
+
+.texto-descricao {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-descricao h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-self: center;
+}
+
+.texto-descricao p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.solucao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    border-bottom: 5px solid #fff;
+}
+
+.solucao img {
+    width: 65%;
+    margin-right: 20px;
+    margin-top: 20px
+}
+
+.texto-solucao {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.texto-solucao h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-self: center;
+}
+
+.texto-solucao p {
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.diferencial {
+    text-align: center;
+    display: block;
+    color: #ff0f7b;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.diferencial i {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #ff0f7b;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 20px;
+}
+
+.seguranca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px;
+    border-bottom: 5px solid #fff;
+}
+
+.seguranca img {
+    width: 50%;
+    margin-right: 20px;
+    margin-top: 20px
+}
+
+.seguranca-descricao {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.seguranca-descricao h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-self: center;
+    color: #ff0f7b;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.seguranca-descricao p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.ia {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    border-bottom: 5px solid #fff;
+}
+
+.ia img {
+    width: 50%;
+    margin-right: 20px;
+    margin-top: 20px
+}
+
+.ia-descricao {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ia-descricao h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-self: center;
+    color: #ff0f7b;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.ia-descricao p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.analise-graficos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    border-bottom: 5px solid #fff;
+}
+
+.analise-graficos img {
+    width: 50%;
+    margin-right: 20px;
+    margin-top: 20px
+}
+
+.graficos-descricao {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.graficos-descricao h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-self: center;
+    color: #ff0f7b;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.graficos-descricao p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.f-planos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px;
+    border-bottom: 5px solid #fff;
+}
+
+.f-planos img {
+    width: 30%;
+    margin-right: 20px;
+    margin-top: 20px
+}
+
+.f-planos-descricao {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.f-planos-descricao h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-self: center;
+    color: #ff0f7b;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.f-planos-descricao p {
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.planos-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.tipos-plano {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.plano-basico, .plano-profissional, .plano-corporativo {
+    margin: 0 15px; /* Margem entre as divs */
+}
+
+.recomendado{
+    background-color: rgb(22, 172, 22);
+    padding: 20px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.plano-basico{
+    border: 3px solid white; 
+    text-align: center; /* Centraliza o texto */
+    margin-left: 100px;
+}
+
+.plano-basico h3 {
+    text-transform: uppercase;
+    color: rgb(22, 172, 22);
+    margin-left: 0;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    position: relative; /* Necessário para usar ::after */
+    font-weight: bold;
+}
+
+.plano-basico h3::after {
+    content: ''; /* Cria o elemento virtual */
+    position: absolute; /* Posiciona em relação ao h3 */
+    bottom: 0; /* Fica na parte inferior do h3 */
+    left: 0; /* Inicia do lado esquerdo */
+    width: 100%; /* Ocupa 100% da largura do h3 */
+    height: 3px; /* Define a espessura da borda */
+    background-color: white; /* Cor da borda */
+}
+
+.plano-basico li{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.plano-profissional{
+    border: 3px solid white; 
+    text-align: center; /* Centraliza o texto */
+
+}
+
+.plano-profissional h3 {
+    text-transform: uppercase;
+    color: rgb(22, 172, 22);
+    margin-left: 0;
+    font-weight: bold;
+}
+.plano-profissional p{
+    position: relative; /* Necessário para usar ::after */
+    text-transform: uppercase;
+    font-weight: bold;
+}   
+.plano-profissional p::after {
+    content: ''; /* Cria o elemento virtual */
+    position: absolute; /* Posiciona em relação ao h3 */
+    bottom: -10px; /* Fica na parte inferior do h3 */
+    left: 0; /* Inicia do lado esquerdo */
+    width: 100%; /* Ocupa 100% da largura do h3 */
+    height: 3px; /* Define a espessura da borda */
+    background-color: white; /* Cor da borda */
+}
+
+.plano-profissional li{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.plano-profissional ul{
+    margin-top: 60px;
+}
+
+
+.plano-corporativo{
+    border: 3px solid white; 
+    text-align: center; /* Centraliza o texto */
+    margin-right: 100px;
+}
+
+.plano-corporativo h3 {
+    text-transform: uppercase;
+    color: rgb(22, 172, 22);
+    padding: 10px 20px;
+    font-weight: bold;
+}
+.plano-corporativo p{
+    position: relative; /* Necessário para usar ::after */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.plano-corporativo p::after {
+    content: ''; /* Cria o elemento virtual */
+    position: absolute; /* Posiciona em relação ao h3 */
+    bottom: -10px; /* Fica na parte inferior do h3 */
+    left: 0; /* Inicia do lado esquerdo */
+    width: 100%; /* Ocupa 100% da largura do h3 */
+    height: 3px; /* Define a espessura da borda */
+    background-color: white; /* Cor da borda */
+}
+
+.plano-corporativo li{
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+
+.contrate-agora{
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s; 
+    align-self: center;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.contrate-agora:hover {
+    background-color: #0056b3;
+}
+
+.duvidas {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.duvidas img {
+    width: 100%;
+    height: 150%;
+    object-fit: cover;
+    filter: brightness(0.2);
+}
+
+.duvidas .duvida {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90%, -50%);
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+.inputs {
+    position: absolute;
+    bottom: -30px;
+    right: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2;
+
+}
+.inputs input {
+    padding: 15px 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+}
+
+.inputs button {
+    background-color: #007bff;
+    color: white;
+    font-size: 15px;
+    padding: 15px 65px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    align-self: center;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.inputs button:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    color: white;
+    padding: 20px;
+    margin-top: 300px;
+    border-bottom: 5px solid white;
+}
+
+.footer-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icones-redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-left : 90px;
+}
+
+.icones-redes-sociais .icon {
+    width: 60px; /* Define o tamanho do círculo */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Fundo branco do círculo */
+    border-radius: 50%; /* Deixa o círculo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.icones-redes-sociais .icon img {
+    width: 60%; /* Tamanho do ícone */
+    height: 60%;
+    object-fit: contain; /* Garante proporção */
+}
+
+.icones-redes-sociais .icon:hover {
+    transform: scale(1.1); /* Amplia ligeiramente no hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+
+.logo {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-left: 118px
+}
+.slogan{
+    font-size:20px;
+    margin-left: 80px;
+    font-weight: bold;
+    
+}
+.endereco{
+    font-size: 20px;
+    margin-right: 100px;
+}
+.email{
+    color: #e60960;
+    font-weight: bold;
+}
+footer{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
