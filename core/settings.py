@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'usuarios',
     'empresarios',
     'investidores',
+    'landingPage',
 ]
 
 MIDDLEWARE = [
