@@ -127,7 +127,7 @@ body {
     justify-content: space-between;
     padding: 80px 100px;
     border-bottom: 5px solid #2e2e2e;
-    background-color: transparent; /* Manter o fundo transparente */
+    background-color: transparent; 
 }
 
 .descricao img {
@@ -154,7 +154,7 @@ body {
 .texto-descricao h2 {
     font-size: 36px;
     margin-bottom: 15px;
-    color: #fff; /* Ajuste da cor para combinar com o fundo escuro */
+    color: #fff; 
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -163,7 +163,7 @@ body {
 .texto-descricao p {
     font-size: 18px;
     line-height: 1.6;
-    color: #ddd; /* Cor mais suave para contrastar com o fundo escuro */
+    color: #ddd; 
     margin-top: 10px;
 }
 
@@ -174,8 +174,7 @@ body {
     justify-content: space-between;
     padding: 50px;
     border-bottom: 5px solid #2e2e2e;
-    background-color: transparent; /* Manter o fundo transparente */
-}
+    background-color: transparent; 
 
 .solucao img {
     width: 60%;
@@ -201,7 +200,7 @@ body {
 .texto-solucao h2 {
     font-size: 36px;
     margin-bottom: 15px;
-    color: #fff; /* Cor clara para contraste com fundo escuro */
+    color: #fff; 
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -210,7 +209,7 @@ body {
 .texto-solucao p {
     font-size: 20px;
     line-height: 1.5;
-    color: #ddd; /* Cor suave para boa legibilidade */
+    color: #ddd;
     margin-top: 10px;
 }
 
@@ -240,7 +239,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 80px; /* Reduzi o padding para otimizar o layout */
+    padding: 60px 80px; 
     border-bottom: 5px solid #2e2e2e;
 }
 
@@ -264,7 +263,7 @@ body {
 }
 
 .seguranca-descricao h2 {
-    font-size: 32px; /* Reduzi o tamanho da fonte para equilíbrio */
+    font-size: 32px;
     margin-bottom: 15px;
     color: #ff0f7b;
     text-transform: uppercase;
@@ -274,7 +273,7 @@ body {
 .seguranca-descricao p {
     font-size: 18px;
     line-height: 1.6;
-    color: #ddd; /* Ajuste da cor para melhor contraste */
+    color: #ddd; 
     margin-top: 10px;
 }
 
@@ -282,7 +281,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 80px; /* Reduzi o padding para otimizar o layout */
+    padding: 60px 80px; 
     border-bottom: 5px solid #2e2e2e;
 }
 
@@ -306,7 +305,7 @@ body {
 }
 
 .ia-descricao h2 {
-    font-size: 32px; /* Reduzi o tamanho da fonte para equilíbrio */
+    font-size: 32px;
     margin-bottom: 15px;
     color: #ff0f7b;
     text-transform: uppercase;
@@ -316,7 +315,7 @@ body {
 .ia-descricao p {
     font-size: 18px;
     line-height: 1.6;
-    color: #ddd; /* Ajuste da cor para melhor contraste */
+    color: #ddd; 
     margin-top: 10px;
 }
 
@@ -325,7 +324,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 80px; /* Reduzi o padding para otimizar o layout */
+    padding: 60px 80px; 
     border-bottom: 5px solid #2e2e2e;
 }
 
@@ -349,7 +348,7 @@ body {
 }
 
 .graficos-descricao h2 {
-    font-size: 32px; /* Ajuste para equilíbrio e melhor legibilidade */
+    font-size: 32px; 
     margin-bottom: 15px;
     color: #ff0f7b;
     text-transform: uppercase;
@@ -359,7 +358,7 @@ body {
 .graficos-descricao p {
     font-size: 18px;
     line-height: 1.6;
-    color: #ddd; /* Cor ajustada para bom contraste */
+    color: #ddd; 
     margin-top: 10px;
 }
 
@@ -390,7 +389,6 @@ body {
     margin-bottom: 50px;
 }
 
-/* Estilo base para os planos */
 .plano-basico, .plano-profissional, .plano-corporativo {
     background-color: #070514;
     border: 2px solid #fff;
@@ -417,7 +415,6 @@ body {
     font-weight: bold;
 }
 
-/* Texto do preço e destaque */
 .plano-profissional p, .plano-corporativo p, .plano-basico p {
     color: #fff;
     padding: 5px 10px;
@@ -437,7 +434,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Lista de benefícios */
 .plano-basico ul, .plano-profissional ul, .plano-corporativo ul {
     list-style: none;
     padding: 0;
@@ -577,7 +573,7 @@ footer {
 }
 
 .icones-redes-sociais .icon {
-    width: 60px; /* Tamanho do círculo */
+    width: 60px;
     height: 60px;
     display: flex;
     justify-content: center;
