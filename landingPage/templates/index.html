@@ -1,0 +1,220 @@
+{% load static %}
+
+{% block 'head' %}
+
+<title>{% block 'title' %}START-SE{% endblock %}</title>
+
+<link rel="stylesheet" href="{% static 'landingPage/css/styles.css' %}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock 'head' %}
+
+{% block 'body' %}
+<!-- Navbar -->
+<nav class="navbar-home">
+    <img src="{% static 'landingPage/img/image.png' %}" alt="Minha imagem">
+    <ul>
+        <li><a href="{% url 'landingPage' %}">Início</a></li>
+        <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#diferencial">Nosso diferencial</a></li>
+        <li><a href="#planos">Planos</a></li>
+    </ul>
+</nav>
+
+<!-- Topo da página -->
+<div class="topo-page">
+    <img src="{% static 'landingPage/img/Negócios-LinguagemInvestidores-17jan2020-GettyImages-Photographer-is-my-life-fotor-2024121162534.jpg' %}" alt="Investidor com notebook na mão.">
+    <h1>start.se</h1>
+    <p>Transformando desafios em oportunidades, e oportunidades em grandes negócios.</p>
+    <!-- Link para o login -->
+    <a href="{% url 'logar' %}">
+        <button class="btn-rosa">
+            Entre ou cadastre-se!
+            <i class="fas fa-arrow-right"></i> <!-- Ícone de seta para frente -->
+        </button>
+    </a>
+</div>
+
+<!-- Descrição -->
+<div class="descricao">
+    <img src="{% static 'landingPage/img/como-comprar-imovel-em-leilao.jpg' %}" alt="Homem batendo o martelo, como se fosse um leilão em frente a um notebook.">
+    <div class="texto-descricao">
+        <h2>Quem somos?</h2>
+        <p>A START-SE é uma plataforma digital que conecta investidores e empreendedores, 
+            funcionando como uma "casa de leilões" online. Investidores avaliam startups,
+            participam de leilões e tomam decisões baseadas em métricas detalhadas.
+            Empreendedores cadastram suas startups, recebem propostas personalizadas e escolhem as melhores ofertas.
+            A plataforma facilita o registro, análise e transações financeiras, garantindo segurança e transparência para todos os usuários.
+        </p>
+    </div>
+</div>
+
+<!-- Solução -->
+<div id = "solucoes" class="solucao">
+    <img src="{% static 'landingPage/img/Investidores.png' %}" alt="Homem batendo o martelo, como se fosse um leilão em frente a um notebook.">
+    <div class="texto-solucao">
+        <h2>Soluções</h2>
+        <p>A START-SE facilita o network entre empreendedores
+            e investidores, criando uma plataforma de crowdfunding completa, segura e
+            eficiente. Com funcionalidades que promovem transparência e interação,
+            garantimos que ambos os lados se beneficiem de forma significativa.
+        </p>
+        <!-- Diferencial -->
+        <div id ="diferencial" class="diferencial">
+            <p>Nossos diferenciais</p>
+            <i class="fas fa-arrow-down"></i>
+        </div>
+    </div>
+</div>
+<!-- Segurança -->
+<div class="seguranca">
+    <img src="{% static 'landingPage/img/seguranca.png' %}" alt="">
+    <div class="seguranca-descricao">
+        <h2>Segurança em transações</h2>
+        <p>A segurança é essencial para garantir a proteção de dados e transações na
+        plataforma. Utilizamos criptografia avançada, autenticação multifator e 
+        monitoramento contínuo para prevenir acessos não autorizados e ataques.
+        Além disso, seguimos regulamentações de proteção de dados, como a LGPD
+        e o GDPR, oferecendo transparência e confiança aos nossos usuários.
+        </p>
+    </div>
+</div>
+
+<!-- Inteligência artificial -->
+<div class="ia">
+    <img src="{% static 'landingPage/img/ia.png' %}" alt="">
+    <div class="ia-descricao">
+        <h2>Suporte com inteligência artificial</h2>
+        <p>Para os investidores, a START-SE oferece recomendações de startups em áreas 
+        promissoras, além de sugestões para diversificação de portfólio e análises
+        detalhadas de riscos, ajudando a tomar decisões mais seguras e estratégicas.
+        Já para os empreendedores, a plataforma disponibiliza análises de viabilidade 
+        financeira, orientações para desenvolver estratégias eficazes de captação de 
+        recursos e dicas práticas para otimizar propostas de investimento, maximizando 
+        as chances de sucesso em suas campanhas.
+
+        </p>
+    </div>
+</div>
+
+<!-- Análise de gráficos -->
+<div class="analise-graficos">
+    <img src="{% static 'landingPage/img/grafico.png' %}" alt="">
+    <div class="graficos-descricao">
+        <h2>Análise de gráficos</h2>
+        <p>A análise de gráficos é essencial para investidores e empreendedores. 
+        Para investidores, facilita a visualização de tendências, avaliação de riscos 
+        e identificação de oportunidades, tornando dados complexos mais claros e decisões 
+        mais informadas. Para empreendedores, ajuda a monitorar métricas, planejar 
+        melhorias e comunicar dados de forma persuasiva aos investidores.
+        </p>
+    </div>
+</div>
+
+
+<div id= "planos" class="planos-title">
+    <h2>Planos</h2>
+</div>
+<div class="desc-planos">
+    <p>Escolha o plano ideal para suas necessidades, com recursos flexíveis e acessíveis.</p>
+</div>
+<div class="tipos-plano">
+    <div class="plano-basico">
+        <h3>Básico (Free)</h3>
+        <ul>
+            <li>Acesso limitado à plataforma para cadastrar 1 startup com funcionalidades básicas.</li>
+            <li>Acesso limitado para visualizar startups cadastradas, sem participar de leilões.</li>
+            <li>Testar a plataforma antes de se comprometer com um plano pago.</li>
+        </ul>
+        <button type="submit" class="contrate-agora">Contrate agora</button>
+    </div>
+
+    <div class="plano-profissional">
+        <div class="recomendado">Recomendado</div>
+        <h3>Profissional</h3>
+        <p>R$100 | Mensal</p>
+        <ul>
+            <li>Cadastrar múltiplas startups com acesso a métricas detalhadas e relatórios.</li>
+            <li>Participar de leilões de investimento e obter análises avançadas.</li>
+            <li>Relatórios analíticos e métricas de crescimento de startups.</li>
+        </ul>
+        <button type="submit" class="contrate-agora">Contrate agora</button>
+    </div>
+
+    <div class="plano-corporativo">
+        <h3>Corporativo</h3>
+        <p>R$200 | Mensal</p>
+        <ul>
+            <li>Funcionalidades personalizadas, dashboards exclusivos e suporte dedicado.</li>
+            <li>Planos personalizados, com acesso a relatórios detalhados e consultoria contínua.</li>
+        </ul>
+        <button type="submit" class="contrate-agora">Contrate agora</button>
+    </div>
+</div>
+
+
+</div>
+<div class="duvidas">
+    <img src="{% static 'landingPage/img/teclado.png' %}" alt="">
+    <div class="conteudo">
+        <p class="duvida">Deixe sua mensagem e tire suas dúvidas</p>
+        <div class="inputs">
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="Email">
+            <input type="number" placeholder="Telefone">
+            <textarea placeholder="Deixe a sua mensagem"></textarea>
+            <button>ENVIAR MENSAGEM</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-conteudo">
+        <div class="lado-esquerdo">
+            <div class="icones-redes-sociais">
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com" target="_blank" class="icon">
+                    <img src="https://img.icons8.com/ios-filled/50/xuvGCOXi8Wyg/linkedin.png" alt="LinkedIn">
+                </a>
+
+                <!-- Instagram Icon -->
+                <a href="https://www.instagram.com" target="_blank" class="icon">
+                    <img src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png" alt="Instagram">
+                </a>
+
+                <!-- YouTube Icon -->
+                <a href="https://www.youtube.com" target="_blank" class="icon">
+                    <img src="https://img.icons8.com/ios-filled/50/youtube-play.png" alt="YouTube">
+                </a>
+
+                <!-- Facebook Icon -->
+                <a href="https://www.facebook.com" target="_blank" class="icon">
+                    <img src="https://img.icons8.com/ios-filled/50/facebook-new.png" alt="Facebook">
+                </a>
+            </div>
+            <div class="logo">
+                <p>Start.se</p>
+            </div>
+            <div class="slogan">
+                <p>Transforme ideias em realidade</p>
+            </div>
+        </div>
+        <div class="informacoes">
+            <div class="endereco">
+                <p>Algum lugar, 123, AlgumaCidade</p>
+                <p>AlgumEstado, País</p>
+                <p>(123) 456 7890</p>
+            </div>
+            <div class="email">
+                <p>email@email.com</p>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">Copyright © 2024 - START-SE | Todos os direitos reservados</p>
+</footer>
+
+{% endblock 'body' %}
